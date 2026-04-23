@@ -1,0 +1,130 @@
+@import "./assets/fonts/poppins.css";
+@import "tailwindcss";
+
+@theme {
+    --color-primaryYellow: #FEB81C;
+    --color-primaryGreen: #03573A;
+    --color-secondaryGreen: #8FE1B0;
+}
+
+@layer base{
+    .font-outline-2{
+        -webkit-text-stroke: 2px #03573A;
+    }
+
+    .font-outline-1{
+        -webkit-text-stroke: 1px #03573A;
+    }
+
+    .font-outline-4{
+        -webkit-text-stroke: 4px #03573A;
+    }
+}
+
+@theme {
+    --font-poppins-variable: 'Poppins-Variable', sans-serif;
+    --font-poppins-variable-italic: 'Poppins-VariableItalic', sans-serif;
+    --font-poppins-light: 'Poppins-Light', sans-serif;
+    --font-poppins-light-italic: 'Poppins-LightItalic', sans-serif;
+    --font-poppins-regular: 'Poppins-Regular', sans-serif;
+    --font-poppins-italic: 'Poppins-Italic', sans-serif;
+    --font-poppins-medium: 'Poppins-Medium', sans-serif;
+    --font-poppins-medium-italic: 'Poppins-MediumItalic', sans-serif;
+    --font-poppins-bold: 'Poppins-Bold', sans-serif;
+    --font-poppins-bold-italic: 'Poppins-BoldItalic', sans-serif;
+    --font-poppins-black: 'Poppins-Black', sans-serif;
+    --font-poppins-black-italic: 'Poppins-BlackItalic', sans-serif;
+}
+
+@layer base {
+	body {
+		/* @apply font-Primary; */
+	}
+}
+
+/* Slide In From Left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out To Left */
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Slide In From Right */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out To Right */
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Animation Classes */
+.slide-in-left {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.slide-out-left {
+  animation: slideOutToLeft 0.5s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.5s ease-out forwards;
+}
+
+.slide-out-right {
+  animation: slideOutToRight 0.5s ease-out forwards;
+}
+
+.slide-in-bottom {
+  animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+
+button {
+    cursor: pointer;
+}
+
